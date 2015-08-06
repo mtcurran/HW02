@@ -9,12 +9,12 @@
 # Body
 
 
-
-
-
-
-
-
+def do_n(f, n):
+	if (n <= 1):
+		return
+	else:
+		f()
+		do_n(f, n-1)
 
 # Write your functions above:
 def print_hello():
@@ -27,7 +27,7 @@ def main():
     """
     print_hello() # replace this with do_n(print_hello, 10)
 
-
+    do_n(print_hello, 10)
 
 if __name__ == "__main__":
     main()

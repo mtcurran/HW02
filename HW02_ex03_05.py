@@ -35,12 +35,71 @@
 # Write your functions below:
 # Body
 
+def print_twice(f):
+	f()
+	f()
+
+def print_four(f):
+	print_twice(f)
+	print_twice(f)
+
+def print_border_start_segment():
+	print '+','-','-','-','-',
+
+def print_row_start_segment():
+	print '|',' ',' ',' ',' ',
+
+def print_border_end_segment():
+	print '-','-','-','-','+'
+
+def print_row_end_segment():
+	print ' ',' ',' ',' ','|'
+
+def print_2_empty_cols():
+	print_row_start_segment()
+	print '|',
+	print_row_end_segment()
+
+def print_4_empty_cols():
+	print_row_start_segment()
+	print_row_start_segment()
+	print_row_start_segment()
+	print '|',
+	print_row_end_segment()
+
+def two_by_two():
+	print_border_start_segment()
+	print '+',
+	print_border_end_segment()
+	print_four(print_2_empty_cols)
+	print_border_start_segment()
+	print '+',
+	print_border_end_segment()
+	print_four(print_2_empty_cols)
+	print_border_start_segment()
+	print '+',
+	print_border_end_segment()
 
 
+def four_by_four():
+	print_four(print_border_start_segment)
+	print '+'
+	print_four(print_4_empty_cols)
 
+	print_four(print_border_start_segment)
+	print '+'
+	print_four(print_4_empty_cols)
 
+	print_four(print_border_start_segment)
+	print '+'
+	print_four(print_4_empty_cols)
 
+	print_four(print_border_start_segment)
+	print '+'
+	print_four(print_4_empty_cols)
 
+	print_four(print_border_start_segment)
+	print '+'
 
 
 
@@ -56,7 +115,8 @@ def main():
     """
     print("Hello World!")
     
-
+    two_by_two()
+    four_by_four()
 
 
 if __name__ == "__main__":

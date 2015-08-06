@@ -21,12 +21,26 @@
 # Write your functions below:
 # Body
 
+def check_fermat(a, b, c, n):
+	left_eq = (a**n + b**n)
+	right_eq = (c**n)
 
+	if left_eq == right_eq:
+		if n > 2:
+			print "Holy smokes, Fermat was wrong!"
+		else:
+			print "No, that doesn't work. N was less than or equal to 2."
+	else:
+		print "No, that doesn't work. The two sides of the equation are not equal."
 
+def check_fermat_ints():
+	print 'Given the format a^n + b^n = c^n:'
+	a_int = int(raw_input('Enter a value for A: '))
+	b_int = int(raw_input('Enter a value for B: '))
+	c_int = int(raw_input('Enter a value for C: '))
+	n_int = int(raw_input('Enter a value for N: '))
 
-
-
-
+	check_fermat(a_int, b_int, c_int, n_int)
 
 
 # Write your functions above:
@@ -39,9 +53,7 @@ def main():
     check_fermat_ints()
     check_fermat()
     """
-    print("Hello World!")
-
-
+    check_fermat_ints()
 
 if __name__ == "__main__":
     main()
